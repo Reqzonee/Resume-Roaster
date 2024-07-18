@@ -23,7 +23,6 @@ const DragDropFiles = () => {
     Array.from(files).forEach((file) => {
       formData.append("Files", file);
     });
-    console.log("env url is ", process.env.REACT_APP_BASE_URL);
 
     try {
       const response = await axios.post(process.env.REACT_APP_BASE_URL, formData, {
